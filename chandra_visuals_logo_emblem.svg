@@ -1,0 +1,36 @@
+<svg viewBox="0 0 220 220" width="220" height="220" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="crescent-grad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FF8C3A"/>
+      <stop offset="50%" stop-color="#FF5500"/>
+      <stop offset="100%" stop-color="#C01800"/>
+    </linearGradient>
+  </defs>
+
+  <defs>
+    <clipPath id="sphere-clip">
+      <circle cx="110" cy="100" r="40"/>
+    </clipPath>
+  </defs>
+
+  <!-- LAYER 1: SPHERE BODY -->
+  <g id="tracking_sphere">
+    <circle cx="110" cy="100" r="40" fill="#ffffff" stroke="rgba(0, 0, 0, 0.08)" stroke-width="1"/>
+  </g>
+
+  <!-- LAYER 2: VFX CROSSHAIRS -->
+  <g id="vfx_crosshairs" clip-path="url(#sphere-clip)" stroke="rgba(0, 0, 0, 0.18)" stroke-width="0.8">
+    <line x1="110" y1="60" x2="110" y2="140"/>
+    <line x1="70" y1="100" x2="150" y2="100"/>
+    <circle cx="110" cy="100" r="12" fill="none"/>
+    <circle cx="110" cy="100" r="24" fill="none" stroke-dasharray="3 3"/>
+    <circle cx="110" cy="100" r="36" fill="none" stroke-dasharray="1 5"/>
+    <circle cx="110" cy="100" r="2" fill="rgba(0, 0, 0, 0.18)"/>
+  </g>
+
+  <!-- LAYER 3: CRESCENT MOON (CHANDRAKOR) -->
+  <g id="crescent_moon">
+    <path d="M 78 76 A 48 48 0 1 0 142 76 A 40 40 0 1 1 78 76 Z" fill="url(#crescent-grad)"/>
+    <path d="M 142 76 A 48 48 0 0 1 158 112" stroke="#FFB060" stroke-width="1" fill="none" opacity="0.6"/>
+  </g>
+</svg>
